@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DB Account Visualisation</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link href="./assets/libs/jquery-ui.min.css" rel="stylesheet"/> -->
+  <link href="./assets/chatWindow.css" rel="stylesheet"/> // chat ui design
+  <!-- <link href="./assets/purejscarousel.css" rel="stylesheet"></link> // carousel template design -->
+  <!-- <link href="./assets/custom/customTemplate.css" rel="stylesheet"></link> -->
+
+  <script src='./assets/libs/jquery.js' type="text/javascript"></script>
+  <script src='./assets/libs/jquery-ui.min.js' type="text/javascript"></script>
+  <script src='./assets/libs/jquery.tmpl.min.js' type="text/javascript"></script>
+  <script src='./assets/libs/moment.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src='./assets/anonymousassertion.js'></script>
+  <script src='./assets/kore-bot-sdk-client.js'></script>
+  <script src='./assets/chatWindow.js'></script> // chat ui js
+  <script src="./assets/emoji.js" type="text/javascript"></script>
+  <script src="./assets/recorder.js" type="text/javascript"></script>
+  <script src="./assets/recorderWorker.js" type="text/javascript"></script>
+  <script src="./assets/purejscarousel.js" type="text/javascript"></script>
+  <script src="./assets/custom/customTemplate.js" type="text/javascript"></script>
+  <script src="./assets/lodash.min.js" type="text/javascript"></script>
+  <script src="./assets/speech/app.js" type="text/javascript"></script>
+  <script src="./assets/speech/key.js" type="text/javascript"></script>
+  <!-- <script src="./assets/client_api.js" type="text/javascript"></script>    -->
+
+  <!-- <script type="text/javascript">
+    $(document).ready(function () {
+      function assertion(options, callback) {
+        var jsonData = {
+          "clientId": botOptions.clientId,
+          "clientSecret": botOptions.clientSecret,
+          "identity": botOptions.userIdentity,
+          "aud": "",
+          "isAnonymous": false
+        };
+        $.ajax({
+          url: botOptions.JWTUrl,
+          type: 'post',
+          data: jsonData,
+          dataType: 'json',
+          success: function (data) {
+            options.assertion = data.token;
+            options.handleError = koreBot.showError;
+            options.chatHistory = koreBot.chatHistory;
+            options.botDetails = koreBot.botDetails;
+            callback(null, options);
+            setTimeout(function () {
+              if (koreBot && koreBot.initToken) {
+                koreBot.initToken(options);
+              }
+            }, 2);
+          },
+          error: function (err) {
+            koreBot.showError(err.responseText);
+          }
+        });
+      } //end of assertion
+
+      var botOptions = {};
+      botOptions.logLevel = 'debug';
+      botOptions.koreAPIUrl = "https://bots.kore.ai/api/";
+      botOptions.koreSpeechAPIUrl = "https://speech.kore.ai/";
+      //botOptions.bearer = "bearer xyz-------------------";
+      botOptions.ttsSocketUrl = 'wss://speech.kore.ai/tts/ws';
+      botOptions.recorderWorkerPath = '../libs/recorderWorker.js';
+      botOptions.assertionFn = assertion;
+      botOptions.koreAnonymousFn = koreAnonymousFn;
+      
+      botOptions.JWTUrl ='http://localhost:8082/jwtToken';
+      //Kamala's Bot
+      // botOptions.userIdentity = 'kamalakannanvkp@gmail.com';// Provide users email id here
+      // botOptions.botInfo = {name:"bot_exchange","_id":"st-f084558a-dcc8-5d29-9c1e-758f6ae03df8"}; // bot name is case sensitive
+      // botOptions.clientId   = "cs-ad69ea3c-2cc4-5da6-91ca-f1da3ed79cd6"; 
+      // botOptions.clientSecret="PLEASE_ENTER_CLIENT_SECRET";
+
+      botOptions.userIdentity = 'vamsi.kallam@hcl.com';// Provide users email id here
+      botOptions.botInfo = {name:"BPMBot","_id":"st-9a32815d-9414-5258-9538-f317afbcc9bf"}; // bot name is case sensitive
+      botOptions.clientId   = "cs-ab016638-fb6d-5270-babc-0af6e9cda43d"; 
+      botOptions.clientSecret="ElBU2Nq9NqMO7vB8hMiuQV2kbLWtiVFNotjDM25w0TQ=";
+
+      var chatConfig={
+        botOptions:botOptions,
+        allowIframe: false,
+        isSendButton: false,
+        isTTSEnabled: true,
+        isSpeechEnabled: true,
+        allowGoogleSpeech: true,
+        allowLocation: true,
+        loadHistory: true,
+        messageHistoryLimit: 10,
+        autoEnableSpeechAndTTS: false,
+        graphLib: "d3"
+      };
+      /* 
+        allowGoogleSpeech will use Google cloud service api.
+        Google speech key is required for all browsers except chrome.
+        On Windows 10, Microsoft Edge will support speech recognization.
+       */
+      var koreBot = koreBotChat();
+      koreBot.show(chatConfig);
+      // $('.openChatWindow').click(function () {
+      //   koreBot.show(chatConfig);
+      // });
+    });
+  </script> -->
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
